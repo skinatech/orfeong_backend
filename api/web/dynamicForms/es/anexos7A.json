@@ -1,0 +1,14 @@
+{
+    "fieldGroupClassName": "row",
+    "fieldGroup": [{
+        "key": "campoA",
+        "type": "input",
+        "className": "col-4",
+        "defaultValue": 0,
+        "templateOptions": {
+            "label": "Click this guy",
+            "text": "JSON Only",
+            "change": "* (model) => { console.log(this.form.controls['campoA'].value); }*"
+        }
+    }]
+}

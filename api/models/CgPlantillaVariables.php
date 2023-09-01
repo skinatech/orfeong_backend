@@ -1,0 +1,68 @@
+<?php
+/**
+ * Que es este módulo o Archivo
+ *
+ * Descripcion Larga
+ *
+ * @category     Gestion Documental
+ * @package      Orfeo NG 
+ * @subpackage   XXXX 
+ * @author       Skina Technologies SAS (http://www.skinatech.com)
+ * @license      Mixta <https://orfeolibre.org/inicio/licencia-de-orfeo-ng/>
+ * @license      ./LICENSE.txt
+ * @link         http://www.orfeolibre.org
+ * @since        Archivo disponible desde la version 1.0.0
+ *
+ * @copyright    2023 Skina Technologies SAS
+ */
+
+namespace api\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "cgPlantillaVariables".
+ *
+ * @property int $idCgPlantillaVariable
+ * @property string $nombreCgPlantillaVariable nombre de la variable de la plantilla
+ * @property string $descripcionCgPlantillaVariable
+ * @property int $estadoCgPlantillaVariable Estado que se le aplica  por defecto 10 activo
+ * @property string $creacionCgPlantillaVariable Creación
+ */
+class CgPlantillaVariables extends \yii\db\ActiveRecord
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'cgPlantillaVariables';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['nombreCgPlantillaVariable', 'descripcionCgPlantillaVariable'], 'required'],
+            [['estadoCgPlantillaVariable'], 'integer'],
+            [['creacionCgPlantillaVariable'], 'safe'],
+            [['nombreCgPlantillaVariable', 'descripcionCgPlantillaVariable'], 'string', 'max' => 80],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'idCgPlantillaVariable' => 'Id Cg Plantilla Variable',
+            'nombreCgPlantillaVariable' => 'Nombre variable de plantilla',
+            'descripcionCgPlantillaVariable' => 'Descripcion variable de plantilla',
+            'estadoCgPlantillaVariable' => 'Estado variable de plantilla',
+            'creacionCgPlantillaVariable' => 'Creacion variable de plantilla',
+        ];
+    }
+}

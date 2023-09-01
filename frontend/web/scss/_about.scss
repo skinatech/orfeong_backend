@@ -1,0 +1,278 @@
+.about-area{
+    position: relative;
+    z-index: 1;
+    .pattent-bg-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @media #{$mobile_device} {
+            display: none
+        }
+        @media #{$tablet_device} {
+            display: none
+        }
+    }
+    .section-title{
+        padding-left: 77px;
+        @media #{$mobile_device} {
+            padding-left: 0;
+            margin-top: 30px;
+        }
+        @media #{$tablet_device} {
+            padding-left: 0;
+            margin-top: 30px;
+        }
+    }
+    .about-thumb{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        a.video-icon{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            font-size: 25px;
+            line-height: 100px;
+            background: #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            border-radius: 50%;
+            top: 50%;
+            margin-left: -50px;
+            transform: translateY(-50%);
+            left: 100%;
+            @media #{$mobile_device} {
+                height: 80px;
+                width: 80px;
+                line-height: 80px;
+                left: 50%;
+                transform: translateY(-50%);
+            }
+            @media #{$tablet_device} {
+                height: 80px;
+                width: 80px;
+                line-height: 80px;
+                left: 50%;
+                transform: translateY(-50%);
+            }
+            // @media #{$mid_device} {
+            //     height: 80px;
+            //     width: 80px;
+            //     line-height: 80px;
+            //     left: 50%;
+            //     transform: translateY(-50%);
+            // }
+            &::before {
+
+                position: absolute;
+                content: '';
+                top: -10px;
+                left: -10px;
+                right: -10px;
+                bottom: -10px;
+                border: 1px solid #ff5e13;
+                border-radius: 50%;
+                opacity: .15;
+            
+            }
+            i{
+                color: #ff5e13;
+                padding-left: 4px;
+            }
+        }
+    }
+    .about-info-text{
+        .quote{
+            font-size: 55px;
+            color: #020c26;
+            margin-bottom: 10px;
+        }
+        .about-ratting{
+            color: #ffba00;
+            font-size: 16px;
+            i{
+                margin-right: 1px;
+            }
+        }
+        p.about-text{
+            font-size: 24px;
+            line-height: 36px;
+            color: #5c5c5c;
+            font-family: $rubik;
+            font-weight: 400;
+            margin-top: 17px;
+            margin-bottom: 44px;
+            @media #{$mobile_device} {
+                font-size:18px;
+            }
+
+        }
+        .about-author{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            .autor-thumb{
+                padding-right: 20px;
+                img{
+                    width: 100%;
+                }
+            }
+            .auhor-text{
+                span{
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #020c26;
+                }
+                p{
+                    color: #848484;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .about-review{
+        position: relative;
+        @media #{$mobile_device} {
+            margin-top: 30px;
+        }
+        img{
+            width: 100%;
+        }
+        .project-review{
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            background: #ff5e13;
+            padding: 55px 43px;
+            h3{
+                color: #fff;
+                font-family: $rubik;
+                font-size: 46px;
+                margin-bottom: 9px;
+                line-height: 30px;
+            }
+            p{
+                font-size: 18px;
+                font-family: $rubik;
+                font-weight: 400;
+                margin-bottom: 0;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+.pt-120{
+    padding-top: 120px;
+    @media #{$mobile_device} {
+        padding-top: 0px;
+    }
+    @media #{$tablet_device} {
+        padding-top: 60px;
+    }
+}
+
+.about-pro-active.owl-carousel {
+    .owl-nav div {
+        background: transparent;
+        height: 65px;
+        left: 30%;
+        line-height: 65px;
+        position: absolute;
+        text-align: center;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        width: 65px;
+        font-size: 16px;
+        color: #ccced4;
+        border: 1px solid transparent;
+        top: 35px;
+        position: absolute;
+        top: -115px;
+        left: 44.5%;
+    }
+    .owl-nav{
+        position: inherit;
+        div{
+            &.owl-next{
+                margin-left: 30px;
+            }
+            &.owl-prev{
+                i{
+                    position: relative;
+                    right: 2px;
+                }
+            }
+        }
+    }
+    &:hover{
+        .owl-nav{
+            div{
+                opacity: 1;
+                visibility: visible;
+                &:hover{
+                    color: #ff5e13;
+                }
+            }
+        }
+    }
+}
+
+.counter-area{
+    padding-top: 65px;
+    padding-bottom: 35px;
+    .single-counter{
+        @include  flexbox();
+        margin-bottom: 30px;
+        @media #{$mobile_device}{
+            display: block;
+            text-align: center;
+        }
+        @media #{$tablet_device}{
+            display: block;
+            text-align: center;
+
+        }
+        .icon{
+            margin-right: 23px;
+            @media #{$mobile_device}{
+                margin-bottom: 20px;
+            }
+            @media #{$tablet_device}{
+                margin-bottom: 20px;
+            }
+        }
+        .counter-number{
+            margin-top: -10px;
+            h3{
+                font-size: 46px;
+                color: #020c26;
+                font-weight: 400;
+                font-family: $rubik;
+                margin-bottom: -2px;
+                span{
+                    font-weight: 400;
+                    font-family: $rubik;
+                }
+            }
+            p{
+                font-size: 18px;
+                color: #848484;
+                font-family: $rubik;
+                font-weight: 400;
+                span{
+                    color: #020c26;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

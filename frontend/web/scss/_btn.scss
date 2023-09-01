@@ -1,0 +1,47 @@
+.boxed-btn {
+	background: $theme-color2;
+	color: #fff;
+	display: inline-block;
+	padding: 13px 32px;
+	font-family: $rubik;
+	font-size: 16px;
+    font-weight: 400;
+    border: 0;
+    border: 1px solid transparent;
+    &:hover{
+        background: transparent;
+        color: #ff5e13 !important;
+        border: 1px solid #ff5e13;
+    }
+    &:focus{
+        outline: none;
+        color: #fff;
+    }
+}
+.boxed-btn2 {
+	background: $theme-color2;
+	color: #fff;
+	display: inline-block;
+	padding: 22px 50px;
+	font-size: 16px;
+	font-family: $rubik;
+	font-weight: 400;
+    &:hover{
+        color: #fff;
+    }
+    &:focus{
+        outline: none;
+        color: #fff;
+    }
+}
+
+.underline-hover {
+	color: #ff5e13;
+	font-weight: 400;
+    font-size: 16px;
+    @include transition(.3s);
+    &:hover{
+        text-decoration: underline;
+        color: #ff5e13;
+    }
+}

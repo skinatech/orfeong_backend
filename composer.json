@@ -1,0 +1,75 @@
+{
+    "name": "yiisoft/yii2-app-advanced",
+    "description": "Yii 2 Advanced Project Template",
+    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6.0",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "blocktrail/cryptojs-aes-php": "^0.1.0",
+        "phpoffice/phpspreadsheet": ">=1.8.2",
+        "kartik-v/mpdf": "^1.0",
+        "kartik-v/yii2-mpdf": "dev-master",
+        "mpdf/mpdf": "^8.0",
+        "2amigos/qrcode-library": "1.1",
+        "phpoffice/phpword": ">=0.17.0",
+        "dmstr/yii2-adminlte-asset": "^2.1",
+        "fedemotta/yii2-widget-datatables": "*",
+        "kartik-v/yii2-widget-select2": "@dev",       
+        "kartik-v/yii2-number": "dev-master",
+        "kartik-v/yii2-widget-fileinput": "*",
+        "wbraganca/yii2-dynamicform": "*",
+        "kartik-v/yii2-widgets": "dev-master",
+        "kartik-v/yii2-money": "dev-master",
+        "philippfrenzel/yii2fullcalendar":"*",
+        "xj/yii2-bootbox-widget": "*",
+        "vova07/yii2-imperavi-widget": "*",
+        "vilochane/yii2-barcode-generator": "dev-master",
+        "kartik-v/bootstrap-fileinput": "dev-master",
+        "liyunfang/yii2-widget-linkpager": "^1.0",
+        "picqer/php-barcode-generator": "^2.0",
+        "kekaadrenalin/yii2-module-recaptcha-v3": "*",
+        "html2text/html2text": "^4.3",
+        "kartik-v/yii2-widget-depdrop": "dev-master",
+        "unyii2/yii2-imap": "dev-master",
+        "yiisoft/yii2-symfonymailer": "^3.0",
+        "yiisoft/yii2-swiftmailer": "~2.1.0" 
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.2.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/codeception": "^5.0",
+        "phpunit/phpunit": ">=5.7.27",
+        "symfony/browser-kit": ">=2.7 <=4.2.4",
+        "unyii2/yii2-imap": "dev-master",
+        "kekaadrenalin/yii2-imap": "dev-master"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

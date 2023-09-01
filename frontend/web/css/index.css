@@ -1,0 +1,648 @@
+/*!
+ * bootstrap-fileinput v5.0.7
+ * http://plugins.krajee.com/file-input
+ *
+ * Krajee default styling for bootstrap-fileinput.
+ *
+ * Author: Kartik Visweswaran
+ * Copyright: 2014 - 2019, Kartik Visweswaran, Krajee.com
+ *
+ * Licensed under the BSD-3-Clause
+ * https://github.com/kartik-v/bootstrap-fileinput/blob/master/LICENSE.md
+ */
+ .file-loading input[type=file], input[type=file].file-loading {
+    width: 0!important;
+    height: 0!important;
+}
+
+.file-no-browse {
+    position: absolute!important;
+    left: 50%!important;
+    bottom: 20%!important;
+    width: 1px!important;
+    height: 1px!important;
+    font-size: 0!important;
+    opacity: 0!important;
+    border: none!important;
+    background: none!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.kv-hidden, .file-caption-icon, .file-zoom-dialog .modal-header:before, .file-zoom-dialog .modal-header:after, .file-input-new .file-preview, .file-input-new .close, .file-input-new .glyphicon-file, .file-input-new .fileinput-remove-button, .file-input-new .fileinput-upload-button, .file-input-new .no-browse .input-group-btn, .file-input-ajax-new .fileinput-remove-button, .file-input-ajax-new .fileinput-upload-button, .file-input-ajax-new .no-browse .input-group-btn, .hide-content .kv-file-content, .is-locked .fileinput-upload-button, .is-locked .fileinput-remove-button {
+    display: none!important;
+}
+
+.btn-file input[type=file], .file-caption-icon, .file-preview .fileinput-remove, .krajee-default .file-thumb-progress, .file-zoom-dialog .btn-navigate, .file-zoom-dialog .floating-buttons {
+    position: absolute!important;
+}
+
+.file-caption-icon .kv-caption-icon {
+    line-height: inherit!important;
+}
+
+.file-input, .file-loading:before, .btn-file, .file-caption, .file-preview, .krajee-default.file-preview-frame, .krajee-default .file-thumbnail-footer, .file-zoom-dialog .modal-dialog {
+    position: relative!important;
+}
+
+.file-error-message pre, .file-error-message ul, .krajee-default .file-actions, .krajee-default .file-other-error {
+    text-align: left!important;
+}
+
+.file-error-message pre, .file-error-message ul {
+    margin: 0!important;
+}
+
+.krajee-default .file-drag-handle, .krajee-default .file-upload-indicator {
+    float: left!important;
+    margin-top: 10px!important;
+    width: 16px!important;
+    height: 16px!important;
+}
+
+.krajee-default .file-thumb-progress .progress, .krajee-default .file-thumb-progress .progress-bar {
+    height: 11px!important;
+    font-family: Verdana, Helvetica, sans-serif!important;
+    font-size: 9px!important;
+}
+
+.krajee-default .file-thumb-progress .progress, .kv-upload-progress .progress {
+    background-color: #ccc!important;
+}
+
+.krajee-default .file-caption-info, .krajee-default .file-size-info {
+    display: block!important;
+    white-space: nowrap!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    width: 160px!important;
+    height: 15px!important;
+    margin: auto!important;
+}
+
+.file-zoom-content > .file-object.type-video, .file-zoom-content > .file-object.type-flash, .file-zoom-content > .file-object.type-image {
+    max-width: 100%!important;
+    max-height: 100%!important;
+    width: auto!important;
+}
+
+.file-zoom-content > .file-object.type-video, .file-zoom-content > .file-object.type-flash {
+    height: 100%!important;
+}
+
+.file-zoom-content > .file-object.type-pdf, .file-zoom-content > .file-object.type-html, .file-zoom-content > .file-object.type-text, .file-zoom-content > .file-object.type-default {
+    width: 100%!important;
+}
+
+.file-loading:before {
+    content: " Loading..."!important;
+    display: inline-block!important;
+    padding-left: 20px!important;
+    line-height: 16px!important;
+    font-size: 13px!important;
+    font-variant: small-caps!important;
+    color: #999!important;
+    background: transparent url(../img/loading.gif) top left no-repeat!important;
+}
+
+.file-object {
+    margin: 0 0 -5px 0!important;
+    padding: 0!important;
+}
+
+.btn-file {
+    overflow: hidden!important;
+}
+
+.btn-file input[type=file] {
+    top: 0!important;
+    left: 0!important;
+    min-width: 100%!important;
+    min-height: 100%!important;
+    text-align: right!important;
+    opacity: 0!important;
+    background: none repeat scroll 0 0 transparent!important;
+    cursor: inherit!important;
+    display: block!important;
+}
+
+.btn-file ::-ms-browse {
+    font-size: 10000px!important;
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.file-caption .file-caption-name {
+    width: 100%!important;
+    margin: 0!important;
+    padding: 0!important;
+    box-shadow: none!important;
+    border: none!important;
+    background: none!important;
+    outline: none!important;
+}
+
+.file-caption.icon-visible .file-caption-icon {
+    display: inline-block!important;
+}
+
+.file-caption.icon-visible .file-caption-name {
+    padding-left: 40px!important;
+}
+
+.file-caption-icon {
+    left: 8px!important;
+}
+
+.file-error-message {
+    color: #a94442!important;
+    background-color: #f2dede!important;
+    margin: 5px!important;
+    border: 1px solid #ebccd1!important;
+    border-radius: 4px!important;
+    padding: 15px!important;
+}
+
+.file-error-message pre {
+    margin: 5px 0!important;
+}
+
+.file-caption-disabled {
+    background-color: #eee!important;
+    cursor: not-allowed!important;
+    opacity: 1!important;
+}
+
+.file-preview {
+    border-radius: 5px 8px 5px 5px;
+    border: 1px solid #ddd!important;
+    padding: 8px!important;
+    width: 100%!important;
+    margin-bottom: 25px!important;
+}
+
+.file-preview .btn-xs {
+    padding: 1px 5px!important;
+    font-size: 12px!important;
+    line-height: 1.5!important;
+    border-radius: 3px!important;
+}
+
+.file-preview .fileinput-remove {
+    top: 1px!important;
+    right: 1px!important;
+    line-height: 10px!important;
+}
+
+.file-preview .clickable {
+    cursor: pointer!important;
+}
+
+.file-preview-image {
+    font: 40px Impact, Charcoal, sans-serif!important;
+    color: #008000!important;
+}
+
+.krajee-default.file-preview-frame {
+    margin: 8px!important;
+    border: 1px solid rgba(0,0,0,0.2)!important;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2)!important;
+    padding: 6px!important;
+    float: left!important;
+    text-align: center!important;
+}
+
+.krajee-default.file-preview-frame .kv-file-content {
+    width: 213px!important;
+    height: 160px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.krajee-default .file-preview-other-frame {
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+}
+
+.krajee-default.file-preview-frame .kv-file-content.kv-pdf-rendered {
+    width: 400px!important;
+}
+
+.krajee-default.file-preview-frame[data-template="audio"] .kv-file-content {
+    width: 240px!important;
+    height: 55px!important;
+}
+
+.krajee-default.file-preview-frame .file-thumbnail-footer {
+    height: 70px!important;
+}
+
+.krajee-default.file-preview-frame:not(.file-preview-error):hover {
+    border: 1px solid rgba(0,0,0,0.3)!important;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4)!important;
+}
+
+.krajee-default .file-preview-text {
+    display: block!important;
+    color: #428bca!important;
+    border: 1px solid #ddd!important;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace!important;
+    outline: none!important;
+    padding: 8px!important;
+    resize: none!important;
+}
+
+.krajee-default .file-preview-html {
+    border: 1px solid #ddd!important;
+    padding: 8px!important;
+    overflow: auto!important;
+}
+
+.krajee-default .file-other-icon {
+    font-size: 6em!important;
+    line-height: 1!important;
+}
+
+.krajee-default .file-footer-buttons {
+    float: right!important;
+}
+
+.krajee-default .file-footer-caption {
+    display: block!important;
+    text-align: center!important;
+    padding-top: 4px!important;
+    font-size: 11px!important;
+    color: #777!important;
+    margin-bottom: 30px!important;
+}
+
+.file-upload-stats {
+    font-size: 10px!important;
+    text-align: center!important;
+    width: 100%!important;
+}
+
+.kv-upload-progress .file-upload-stats {
+    font-size: 12px!important;
+    margin: -10px 0 5px!important;
+}
+
+.krajee-default .file-preview-error {
+    opacity: 0.65!important;
+    box-shadow: none!important;
+}
+
+.krajee-default .file-thumb-progress {
+    height: 11px!important;
+    top: 37px!important;
+    left: 0!important;
+    right: 0!important;
+}
+
+.krajee-default.kvsortable-ghost {
+    background: #e1edf7!important;
+    border: 2px solid #a1abff!important;
+}
+
+.krajee-default .file-preview-other:hover {
+    opacity: 0.8!important;
+}
+
+.krajee-default .file-preview-frame:not(.file-preview-error) .file-footer-caption:hover {
+    color: #000!important;
+}
+
+.kv-upload-progress .progress {
+    height: 20px!important;
+    margin: 10px 0!important;
+    overflow: hidden!important;
+}
+
+.kv-upload-progress .progress-bar {
+    height: 20px!important;
+    font-family: Verdana, Helvetica, sans-serif!important;
+}
+
+/*noinspection CssOverwrittenProperties*/
+.file-zoom-dialog .file-other-icon {
+    font-size: 22em!important;
+    font-size: 50vmin!important;
+}
+
+.file-zoom-dialog .modal-dialog {
+    width: auto!important;
+}
+
+.file-zoom-dialog .modal-header {
+    display: flex!important;
+    align-items: center!important;
+    justify-content: space-between!important;
+}
+
+.file-zoom-dialog .btn-navigate {
+    padding: 0!important;
+    margin: 0!important;
+    background: transparent!important;
+    text-decoration: none!important;
+    outline: none!important;
+    opacity: 0.7!important;
+    top: 45%!important;
+    font-size: 4em!important;
+    color: #1c94c4!important;
+}
+
+.file-zoom-dialog .btn-navigate:not([disabled]):hover {
+    outline: none!important;
+    box-shadow: none!important;
+    opacity: 0.6!important;
+}
+
+.file-zoom-dialog .floating-buttons {
+    top: 5px!important;
+    right: 10px!important;
+}
+
+.file-zoom-dialog .btn-navigate[disabled] {
+    opacity: 0.3!important;
+}
+
+.file-zoom-dialog .btn-prev {
+    left: 1px!important;
+}
+
+.file-zoom-dialog .btn-next {
+    right: 1px!important;
+}
+
+.file-zoom-dialog .kv-zoom-title {
+    font-weight: 300!important;
+    color: #999!important;
+    max-width: 50%!important;
+    overflow: hidden!important;
+    white-space: nowrap!important;
+    text-overflow: ellipsis!important;
+}
+
+.file-input-new .no-browse .form-control {
+    border-top-right-radius: 4px!important;
+    border-bottom-right-radius: 4px!important;
+}
+
+.file-input-ajax-new .no-browse .form-control {
+    border-top-right-radius: 4px!important;
+    border-bottom-right-radius: 4px!important;
+}
+
+.file-caption-main {
+    width: 100%!important;
+}
+
+.file-thumb-loading {
+    background: transparent url(../img/loading.gif) no-repeat scroll center center content-box !important;
+}
+
+.file-drop-zone {
+    border: 1px dashed #aaa!important;
+    border-radius: 4px!important;
+    text-align: center!important;
+    vertical-align: middle!important;
+    margin: 12px 15px 12px 12px!important;
+    padding: 5px!important;
+}
+
+.file-drop-zone.clickable:hover {
+    border: 2px dashed #999!important;
+}
+
+.file-drop-zone.clickable:focus {
+    border: 2px solid #5acde2!important;
+}
+
+.file-drop-zone .file-preview-thumbnails {
+    cursor: default!important;
+}
+
+.file-drop-zone-title {
+    color: #aaa!important;
+    font-size: 1.6em!important;
+    padding: 85px 10px!important;
+    cursor: default!important;
+}
+
+.file-highlighted {
+    border: 2px dashed #999 !important;
+    background-color: #eee!important;
+}
+
+.file-uploading {
+    background: url(../img/loading-sm.gif) no-repeat center bottom 10px!important;
+    opacity: 0.65!important;
+}
+
+.file-zoom-fullscreen .modal-dialog {
+    min-width: 100%!important;
+    margin: 0!important;
+}
+
+.file-zoom-fullscreen .modal-content {
+    border-radius: 0!important;
+    box-shadow: none!important;
+    min-height: 100vh!important;
+}
+
+.file-zoom-fullscreen .modal-body {
+    overflow-y: auto!important;
+}
+
+.floating-buttons {
+    z-index: 3000!important;
+}
+
+.floating-buttons .btn-kv {
+    margin-left: 3px!important;
+    z-index: 3000!important;
+}
+
+.kv-zoom-actions .btn-kv {
+    margin-left: 3px!important;
+}
+
+.file-zoom-content {
+    height: 480px!important;
+    text-align: center!important;
+}
+
+.file-zoom-content .file-preview-image {
+    max-height: 100%!important;
+}
+
+.file-zoom-content .file-preview-video {
+    max-height: 100%!important;
+}
+
+.file-zoom-content > .file-object.type-image {
+    height: auto!important;
+    min-height: inherit!important;
+}
+
+.file-zoom-content > .file-object.type-audio {
+    width: auto!important;
+    height: 30px!important;
+}
+
+@media (min-width: 576px) {
+    .file-zoom-dialog .modal-dialog {
+        max-width: 500px!important;
+    }
+}
+
+@media (min-width: 992px) {
+    .file-zoom-dialog .modal-lg {
+        max-width: 800px!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .file-preview-thumbnails {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column!important;
+    }
+
+    .file-zoom-dialog .modal-header {
+        flex-direction: column!important;
+    }
+}
+
+@media (max-width: 350px) {
+    .krajee-default.file-preview-frame:not([data-template="audio"]) .kv-file-content {
+        width: 160px!important;
+    }
+}
+
+@media (max-width: 420px) {
+    .krajee-default.file-preview-frame .kv-file-content.kv-pdf-rendered {
+        width: 100%!important;
+    }
+}
+
+.file-loading[dir=rtl]:before {
+    background: transparent url(../img/loading.gif) top right no-repeat!important;
+    padding-left: 0!important;
+    padding-right: 20px!important;
+}
+
+.file-sortable .file-drag-handle {
+    cursor: move!important;
+    opacity: 1!important;
+}
+
+.file-sortable .file-drag-handle:hover {
+    opacity: 0.7!important;
+}
+
+.clickable .file-drop-zone-title {
+    cursor: pointer!important;
+}
+
+.file-preview-initial.sortable-chosen {
+    background-color: #d9edf7!important;
+}
+.formSolicitud{
+    /*padding: 25px;*/
+    /*border: 1px solid #ccc;*/
+    border-radius: 35px;
+}
+
+
+.file-caption-main .kv-fileinput-caption{ 
+    width: 80%;
+}
+
+.file-caption-main .input-group-append{ 
+    width: 20%;
+}
+
+.input-group-append{
+    width: 20%;
+}
+.fileinput-remove {
+    width: 50%;
+}   
+.hidden-xs{
+    display:none;
+}
+.btn-file{
+    width: 50%;
+}
+.form-holder i {
+    right: 0px!important;
+    top: 2px!important;
+    font-size: 18px!important;
+}
+.file-preview  .close{
+    width: auto!important;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3;
+    color: #000;
+    text-shadow: 0 1px 0 #333;
+    opacity: .5;
+    border: 1px solid #333!important;
+    border-radius: 20px;
+    background-color: #cccccc!important;
+    padding: 5px!important;
+}
+.close {
+    width: auto!important;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* line-height: 3; */
+    color: #000;
+    text-shadow: 0 1px 0 #333;
+    opacity: .5;
+    /* border: 1px solid #333!important; */
+    border-radius: 20px;
+    /* background-color: #cccccc!important;
+    padding: 5px!important; */
+}
+.close span{
+    margin-top: 3px;    
+}
+
+.file-other-icon .glyphicon .glyphicon-file{
+    font-size:18px!important;
+}
+
+.file-caption-name::placeholder{
+    padding-left: 20px;
+}
+.kv-error-close{
+    height: 28px!important;
+    line-height: 0!important;
+}
+.div-has-error-anex{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color:#365c8a;
+
+}
+.modal-header .close{
+    width: auto!important;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2;
+    color: #000;
+    text-shadow: 0 1px 0 #333;
+    opacity: .5;
+    border: 1px solid #3330!important;
+    border-radius: 20px;
+    background-color: #cccccc00!important;
+}

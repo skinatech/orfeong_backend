@@ -1,0 +1,120 @@
+.ptb200{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    @media #{$mobile_device}{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+.banner-bg-1{
+    background-image: url(../img/banner/banner.jpg);
+}
+.breadcrumb{
+    background-size: cover;
+    margin: 0 !important;
+    .breadcrumb_iner{
+        .breadcrumb_iner_item{
+            h2{
+                font-size: 60px;
+                font-weight: 500;
+                font-family: $rubik;
+                color: #fff;
+                @media #{$mobile_device} {
+                    font-size: 35px;
+                }
+                @media #{$tablet_device} {
+                    font-size: 45px;
+                }
+            }
+            p{
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+                a{
+                    color: #ff5e13;
+                }
+            }
+        }
+    }
+}
+
+.details-bg-1{
+    background-image: url(../img/banner/details-banner.jpg);
+}
+
+// details-banner
+.details-banner-area{
+    height: 760px;
+    height: 760px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+    @media #{$mobile_device}{
+        height: 460px;
+    }
+    @media #{$tablet_device}{
+        height: 560px;
+    }
+    @media #{$mid_device}{
+        height: 560px;
+    }
+    .details-banner-text{
+        margin-bottom: 131px;
+        a{
+            font-family: $rubik;
+            color: #ff5e13;
+            font-size: 16px;
+            font-weight: 400;
+            display: inline-block;
+            margin-bottom: 13px;
+        }
+        h2{
+            font-family: $rubik;
+            font-size: 60px;
+            font-weight: 500;
+            color: #fff;
+            line-height: 72px;
+            @media #{$mobile_device}{
+                font-size: 25px;
+                line-height: 40px;
+            }
+            @media #{$tablet_device}{
+                font-size: 45px;
+                line-height: 60px;
+            }
+            br{
+                @media #{$mobile_device}{
+                    display: none;
+                }
+                @media #{$tablet_device}{
+                    display: none;
+                }
+                @media #{$mid_device}{
+                    display: none;
+                }
+            }
+        }
+    }
+    &.details-banner-area2{
+        display: table;
+        width: 100%;
+        height: 100%;
+        height: 760px;
+        .details-banner-inner2{
+            display: table-cell;
+            vertical-align: bottom;
+        }
+        @media #{$mobile_device}{
+            height: 460px;
+        }
+        @media #{$tablet_device}{
+            height: 560px;
+        }
+        @media #{$mid_device}{
+            height: 560px;
+        }
+    }
+}

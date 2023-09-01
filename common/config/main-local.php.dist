@@ -1,0 +1,92 @@
+<?php
+/**
+ * Que es este módulo o Archivo
+ *
+ * Descripcion Larga
+ *
+ * @category     Gestion Documental
+ * @package      Orfeo NG 
+ * @subpackage   XXXX 
+ * @author       Skina Technologies SAS (http://www.skinatech.com)
+ * @license      Mixta <https://orfeolibre.org/inicio/licencia-de-orfeo-ng/>
+ * @license      ./LICENSE.txt
+ * @link         http://www.orfeolibre.org
+ * @since        Archivo disponible desde la version 1.0.0
+ *
+ * @copyright    2023 Skina Technologies SAS
+ */
+
+return [
+    'name' => 'OrfeoNg',
+    'components' => [
+        
+        # Conexión principal a BD del sistema (por defecto MYSQL)
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=orfeoNG_db',
+            'username' => 'usuario',
+            'password' => 'clave',
+            'charset' => 'utf8',
+        ],
+
+        /**
+         * Ejemplos de conexión con los distintos motores de base de datos
+         */
+
+        # MYSQL
+        /*'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=orfeoNG_db',
+            'username' => 'usuario',
+            'password' => 'clave',
+            'charset' => 'utf8',
+        ],*/
+
+        # ORACLE
+        /*'db'=>[   
+            'class' => 'yii\db\Connection',
+            'dsn'=> 'oci:dbname=//127.0.0.1:1521/xe;charset=UTF8',
+            'username' => 'usuario',
+            'password' => 'clave',
+            'attributes' => [PDO::ATTR_STRINGIFY_FETCHES => true],
+            'on afterOpen' => function ($event) {
+                $event->sender->createCommand("ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH24:MI:SS'")->execute();
+                $event->sender->createCommand("ALTER SESSION SET NLS_COMP = LINGUISTIC")->execute();
+                $event->sender->createCommand("ALTER SESSION SET NLS_SORT = 'BINARY_CI'")->execute(); 
+            }
+        ],*/
+
+        # POSTGRES
+        /*'db' => [ 
+            'class' => 'yii\db\Connection', 
+            'dsn' => 'pgsql:host=127.0.0.1;port=5432;dbname=orfeo_ng', 
+            'username' => 'postgres', 
+            'password' => 'postgres', 
+            'charset' => 'utf8' 
+        ],*/
+
+        'mailer' => [
+            'class' => \yii\symfonymailer\Mailer::class,
+            'viewPath' => '@common/mail',
+            // send all mails to a file by default. You have to set
+            // 'useFileTransport' to false and configure a transport
+            // for the mailer to send real emails.
+            'useFileTransport' => false,
+            'transport' => [
+                'host' => 'mail.dominio.com',
+                'username' => 'correo@dominio.com',
+                'password' => 'clave',
+                'port' => '587',
+                'encryption' => 'tls',
+                'dsn' => 'native://default',
+                'streamOptions' => [
+                    'ssl' => [
+                        'allow_self_signed' => true,
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                    ],
+                ],
+            ],
+        ],
+    ],
+];

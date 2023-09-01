@@ -1,0 +1,96 @@
+.slider-area{
+    .single-slider{
+        height: 760px;
+        background-size: cover;
+        background-position: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+        z-index: 2;
+        @media #{$mobile_device} {
+            height: 600px;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            background: #020c26;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: .2;
+        }
+        .slider-content {
+            background: #fff;
+            padding: 73px 56px 100px 50px;
+            position: relative;
+            z-index: 9;
+            display: inline-block;
+            @media #{$mobile_device} {
+                padding: 73px 40px 100px 40px;
+            }
+            p{
+                color: $theme-color2;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 16px;
+            }
+            h3{
+                font-family: $rubik;
+                font-weight: 500;
+                font-size: 60px;
+                color: #020c26;
+                line-height: 72px;
+                margin-bottom: 28px;
+                @media #{$mobile_device} {
+                    font-size: 25px;
+                    line-height: 45px;
+                    margin-bottom: 10px;
+                }
+            }
+            a{
+                i{
+                    font-size: 14px;
+                    padding-left: 5px;
+                }
+            }
+            .slider-btn {
+                position: absolute;
+                bottom: 0;
+                left: 55px;
+                @media #{$mobile_device} {
+                    left: 40px;
+                }
+            }
+        }
+    }
+    .slider-active{
+        .owl-dots {
+            position: absolute;
+            top: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 100px;
+            div {
+                width: 15px;
+                height: 15px;
+                background: transparent;
+                display: block;
+                margin: 13px 0;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                .active{
+                    background: #fff;
+                }
+              }
+          }
+    }
+    .slider-active .owl-dots div.active {
+        background: #fff;
+    }
+}

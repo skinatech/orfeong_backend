@@ -1,0 +1,118 @@
+#search_input_box {
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1140px;
+    z-index: 999;
+    text-align: center;
+    background: #1e1c27;
+    ::placeholder {
+        color: #fff;
+    }
+}
+
+#search_input_box .form-control {
+    background: transparent;
+    border: 0;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0;
+}
+
+#search_input_box .btn {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+}
+
+#search_input_box .ti-close {
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    padding-right: 0;
+}
+
+
+.search-inner{
+    padding: 5px 5px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.navbar_fixed #search_input_box {
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1140px;
+    z-index: 999;
+    text-align: center;
+    padding: 0 20px;
+    top: 80px;
+    @media #{$mobile_device} {
+        top: 50px;
+    }
+    @media #{$tablet_device} {
+        top: 50px;
+    }
+}
+
+.social-link{
+    position: relative;
+    z-index: 9;
+    @media #{$tablet_device} {
+        position: static;
+
+}
+    @media #{$mobile_device} {
+        position: static;
+        }
+}
+#search_1 {
+	position: absolute;
+	color: #fff;
+	top: 1px;
+	left: 23px;
+    font-size: 14px;
+    @media #{$mobile_device} {
+        position: absolute;
+        color: #fff;
+        top: 3px;
+        left: auto;
+        right: 17px;
+        font-size: 14px;
+    }
+    @media #{$tablet_device} {
+            position: absolute;
+            left: auto;
+            right: 0;
+    }
+}
+#close_search {
+	position: relative;
+	z-index: 99999;
+	top: 10px;
+	color: #fff;
+}
+#search_1 {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: inherit;
+    font-size: 14px;
+    transform: translateY(-50%);
+}

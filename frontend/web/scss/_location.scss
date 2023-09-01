@@ -1,0 +1,37 @@
+.addres-area{
+    .single-address{
+        position: relative;
+        margin-top: 53px;
+        z-index: 0;
+        .addres-icon {
+            position: absolute;
+            top: -53px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        h3{
+            color: #fff;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: $rubik;
+            position: relative;
+            z-index: 9;
+        }
+        p{
+            font-size: 16px;
+            color: #a9a9a9;
+            line-height: 28px;
+            margin-bottom: 21px;
+            position: relative;
+            z-index: 9;
+        }
+        a{
+            position: relative;
+            z-index: 9;
+        }
+        @media #{$mobile_device}{
+            margin-bottom: 30px;
+        }
+    }
+}

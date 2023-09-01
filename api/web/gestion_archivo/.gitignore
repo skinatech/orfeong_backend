@@ -1,0 +1,5 @@
+# Se ignoran todos los archivos, a excepción de los formatos base a utilizar en una mejora
+*
+!.gitignore
+!.formato_rotulo_caja.docx
+!.formato_rotulo_carpeta.docx

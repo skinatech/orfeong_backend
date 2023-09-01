@@ -1,0 +1,122 @@
+<?php
+/**
+ * Que es este módulo o Archivo
+ *
+ * Descripcion Larga
+ *
+ * @category     Gestion Documental
+ * @package      Orfeo NG 
+ * @subpackage   XXXX 
+ * @author       Skina Technologies SAS (http://www.skinatech.com)
+ * @license      Mixta <https://orfeolibre.org/inicio/licencia-de-orfeo-ng/>
+ * @license      ./LICENSE.txt
+ * @link         http://www.orfeolibre.org
+ * @since        Archivo disponible desde la version 1.0.0
+ *
+ * @copyright    2023 Skina Technologies SAS
+ */
+
+return [
+    'llaveAES' => 'aegoh3quai3Aijum7cae0theifo}uv',
+    'debugAES' => FALSE,           // [TRUE,FALSE]
+    'ipServer' => 'http://127.0.0.1:4200/#/',
+    'urlBaseApiPublic' => 'http://localhost/ng_backend/frontend/web/', //Ruta de página pública
+    'debugMailActive' => TRUE,
+    'debugEmail' => 'correo@dominio',
+
+    # Separador para la estructura del radicado, ejemplo '-' => SAL-ESA-00001-2021, '.' => SAL.ESA.00001.2021, '' => SALESA000012021
+    'separadorEstructuraRadicado' => '-',
+
+    /**
+     * Forma de realizar el consecutivo del radicado
+     * tipoRad: 'por tipo de radicado'
+     * tipoRad&regional: 'por tipo de radicado y regional'
+     */
+    'tipoConsecutivoRadicado' => 'tipoRad&regional',
+
+    # Activar función de generación de radicados temporales.
+    'activateRadiTmp' => true, // [true, false]
+    # correo a enviar copia de transacción "respuesta por correo"
+    'radiSendReplyEMail' => 'correo@dominio',
+
+    # Conexion de directorio activo
+        // 'ldapServer' => 'xxxxxx.gov.co',
+        // 'ldapServer' => 'xx.xx.xx.xx',
+        // 'cadenaBusqLDAP' => 'DC=xx,DC=gov,DC=co',
+        // 'campoBusqLDAP' => 'sAMAccountName',
+        // 'adminLDAP' => 'orfeo',
+        // 'paswLDAP' => 'xxx',
+    
+
+
+    # Motor utilizado para la base de datos principal: ['MYSQL', 'POSTGRESQL', 'MSSQL', 'ORACLE']
+        'motorDB' => 'MYSQL', 
+
+
+
+    # Usuario y clave de la página pública (ANONIMO)
+        'userPublicPage' => 'anonimo',
+        'passwordPublicPage' => '4n0N1m0$',
+        
+    # Id Usuario anonimo, segun el id de la tabla de dicho cliente se debe poner este valor
+    'idRemitenteAnonimo' => 3,
+
+    # INidica si la autenticación al IMAP va con correo o con usuario 0= con usuario y 1 con correo
+    'autenticacion' => '0',
+    'dominio' => 'skinatech.com',
+
+    # Información del Cliente Instalacion ORFEO
+        'cliente' => 'SKINA TECHNOLOGIES S.A.S',
+        'nit' => 'xxxxxx',
+        'etiquetaCliente' => 'SKINATECH',        
+        'fondo' => 'SKINA TECHNOLOGIES S.A.S', // Nombre del fondo documental (CCD)
+        'entidad' => 'SKINA TECHNOLOGIES S.A.S',
+
+        'rutaLogo' => 'vertical-color_aero.png', // Logo utilizado en "CCD", "acta de anulación" y pdf de "indice electronico"
+        'rutaLogoPrint' => 'vertical-color_aero_printsticker.png', // Logo del sticker
+        'rutaLogoPdf' => 'vertical-color_aero.png', // Logo en acta de aceptación de anulaciones
+
+
+
+    # Configuración general del cliente    
+        'usuarioNotificadorTransferencia' => 'correo@dominio', // Correo del Administrador de Transferencias Documentales
+        /* Término y condiciones del modulo de configuración */
+        'terminosCondiciones' => 'Autorizo a la XXXX, para tratar mis datos personales con el fin de comunicarme cualquier situación o evento relacionado con mi solicitud; en cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013.',
+        'longitudDependencia' => 5, // Longitud de la dependencia
+        'lengthNumberFiling' => 6, // Longitud asignada para el consecutivo del radicado
+
+
+    
+    # Configuración del tipo de radicado de PQRS 
+        'diasNotificacion' => 3, //  Variable para tiempos de respuesta
+        'usuarioNotificadorPqrs' => 'correo@dominio', // Correo electrónico usuario administrador de PQR
+        'RolUserPqrs' => 'Usuario Externo',      // Perfil - Usuario Externo
+        'idDependenciaUserPqrs' => 1,            // GRUPO DE ARCHIVO - 1030
+        'idUserTramitadorPqrs' => 1,             // id usuario ORFEO
+        'idTramitePqrs' => 1,                    // id tramite de pension
+        'cargoUserPqrs' => 'Usuario Externo',
+        'idGdTrdTipoDocumentalPqrs' => 1,
+        'diasRespuestaPqrs' => 5, // Plazo que tiene un ciudadano de dar respuesta a un PQRSD después de devolverlo
+        
+
+
+    # Configuración tipos de radicados
+        /** 
+         * Esta campo permite saber como es la configuración del tipo de radicado
+         * si es texto quiere decir que la forma de identificar el radicado es EN, SA, PQRSD
+         * pero si es numerico se representa con 1, 2, 3
+         **/
+        'codigoradicado' => 'texto', // ['texto', 'numero']
+
+        /**
+         * Tipo de Radicado, esto debe cambiar segun la confirguración del cliente y segun la tabla de CgTiposRadicados los tipos 
+         * (entrada, salida, PQRSD, comunicación interna) son por defecto. Esta configuración se esta comparando con el 
+         * campo codigoCgTipoRadicado.
+         **/
+        'CgTipoRadicado' => [
+            'radiSalida' => 'SAL',   
+            'radiEntrada' => 'ENT',
+            'comunicacionInterna' => 'INT',
+            'radiPqrs' => 'PQR',
+        ],
+];

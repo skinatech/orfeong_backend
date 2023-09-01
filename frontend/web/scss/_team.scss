@@ -1,0 +1,81 @@
+.team-area {
+    .single-team{
+        @media #{$mobile_device}{
+            margin-bottom: 30px;
+        }
+        @media #{$tablet_device}{
+            margin-bottom: 30px;
+        }
+        .team-thumb{
+            position: relative;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+            .team-hover{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateY(100px);
+                opacity: 0;
+                visibility: hidden;
+                @include transition(.5s);
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #020c26;
+                    opacity: .8;
+                    @include transition(.5s);
+                }
+                .team-link{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    transform: translateY(-50%);
+                    ul{
+                        li{
+                            display: inline-block;
+                            a{
+                                color: #fff;
+                                font-size: 18px;
+                                margin: 0 8px;
+                                &:hover{
+                                    color: #ff5e13;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .team-info{
+            margin-top: 24px;
+            h3{
+                font-weight: 400;
+                font-family: $rubik;
+                color: #020c26;
+                margin-bottom: 8px;
+            }
+            p{
+                font-weight: 400;
+                font-family: $rubik;
+                font-size: 16px;
+                color: #5c5c5c;
+                margin-bottom: 0;
+            }
+        }
+        &:hover .team-hover{
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
